@@ -1,12 +1,14 @@
 {
-  "name": "create-nextstream-app",
+  "name": "create-nextjetstream",
   "description": "Scaffold a new Laravel and Next.js application",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "author": "Ozzie Neher @ozziexsh",
   "bin": {
-    "create-nextstream-app": "./bin/run"
+    "create-nextstream-app": "bin/run"
   },
-  "bugs": "https://github.com/ozziexsh/nextstream-cli/issues",
+  "bugs": {
+    "url": "https://github.com/ozziexsh/nextstream-cli/issues"
+  },
   "dependencies": {
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
@@ -48,7 +50,10 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "ozziexsh/laravel-nextstream",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozziexsh/laravel-nextstream.git"
+  },
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
