@@ -6,7 +6,7 @@ import * as path from 'path';
 export default class New extends Command {
   static description = 'Scaffold a new Laravel + Next.js application';
 
-  static examples = ['$ create-nextstream-app new app'];
+  static examples = ['$ create-nextjetstream new app'];
 
   static flags = {
     debug: flags.boolean({ char: 'v', description: 'debug output' }),
@@ -23,7 +23,7 @@ export default class New extends Command {
     const backendFolder = path.join(rootFolder, 'backend');
     fs.mkdirSync(rootFolder);
     execSync(
-      'git clone https://github.com/ozziexsh/nextstream-ts.git frontend',
+      'git clone https://github.com/ahmedmaher30190/nextstream-ts frontend',
       { cwd: rootFolder },
     );
     execSync('rm -rf frontend/.git', { cwd: rootFolder });
