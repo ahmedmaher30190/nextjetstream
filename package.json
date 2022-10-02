@@ -1,5 +1,5 @@
 {
-  "name": "create_sabelhost_expo",
+  "name": "create-sabelhost-expo",
   "description": "React native expo app with redux and Magnus UI",
   "version": "1.0.0",
   "author": "Ahmed Maher @ahmedmaher30190",
@@ -27,7 +27,7 @@
   "files": [
     "/bin",
     "/lib",
-    "/npm-shrinkwrap.json",
+    "/npm-shrinkwrap.json"
   ],
   "homepage": "https://github.com/sabelhost/create-sabelhost-expo.git",
   "keywords": [
