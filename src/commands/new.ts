@@ -4,9 +4,9 @@ import * as fs from 'fs-extra';
 import * as path from 'path';
 
 export default class New extends Command {
-  static description = 'Scaffold a new Laravel + Next.js application';
+  static description = 'Scaffold a new react native expo app  + redux + magnus-ui';
 
-  static examples = ['$ create-nextjetstream new app'];
+  static examples = ['$ create-sabelhost-expo new app'];
 
   static flags = {
     debug: flags.boolean({ char: 'v', description: 'debug output' }),
@@ -19,26 +19,20 @@ export default class New extends Command {
 
     this.log('Creating frontend project...');
     const rootFolder = path.join(process.cwd(), args.name);
-    const frontendFolder = path.join(rootFolder, 'frontend');
-    const backendFolder = path.join(rootFolder, 'backend');
+    const frontendFolder = path.join(rootFolder, args.name);
     fs.mkdirSync(rootFolder);
     execSync(
-      'git clone https://github.com/ahmedmaher30190/nextstream-ts frontend',
+      'git clone https://github.com/sabelhost/react-native-app.git'+args.name,
       { cwd: rootFolder },
     );
     execSync('rm -rf frontend/.git', { cwd: rootFolder });
 
+    this.log('install yarn .');
+    execSync('npm -g i yarn', { cwd: frontendFolder });
+    
     this.log('Installing npm dependencies');
-    execSync('npm i', { cwd: frontendFolder });
-
-    this.log('Creating environment file');
-    execSync('cp .env.local.example .env.local', { cwd: frontendFolder });
-
-    this.log('Creating Laravel project...');
-    execSync(`git clone https://github.com/laravel/laravel.git backend`, { cwd: rootFolder });
-
-    this.log('Installing Nextstream...');
-    execSync(`composer require ozzie/nextstream`, { cwd: backendFolder });
-    execSync(`php artisan nextstream:install`, { cwd: backendFolder });
+    execSync('yarn', { cwd: frontendFolder });
+    this.log('your app is ready now \n cd '+args.name+' \n yarn start ');
+    
   }
 }
