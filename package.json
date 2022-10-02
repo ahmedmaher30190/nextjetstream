@@ -4,14 +4,13 @@
   "version": "1.0.0",
   "author": "Ahmed Maher @ahmedmaher30190",
   "dependencies": {
-    "@oclif/command": "^1.8.0",
-    "@oclif/config": "^1.17.0",
-    "@oclif/plugin-help": "^3.2.1",
+    "@sabelhost/command": "^1.8.0",
+    "@sabelhost/config": "^1.17.0",
+    "@sabelhost/plugin-help": "^3.2.1",
     "fs-extra": "^9.1.0",
     "tslib": "^1.14.1"
   },
   "devDependencies": {
-    "@oclif/dev-cli": "^1.26.0",
     "@types/fs-extra": "^9.0.6",
     "@types/node": "^10.17.51",
     "@typescript-eslint/eslint-plugin": "^4.12.0",
@@ -29,28 +28,32 @@
     "/bin",
     "/lib",
     "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
   ],
   "homepage": "https://github.com/sabelhost/create-sabelhost-expo.git",
   "keywords": [
-    "oclif"
+    "sabelhost",
+    "react native",
+    "expo",
+    "redux",
+    "Magnus UI",
+    "ahmedmaher30190"
   ],
   "license": "MIT",
   "main": "lib/index.js",
-  "oclif": {
+  "sabelhost": {
     "commands": "./lib/commands",
     "bin": "create-sabelhost-expo new",
     "plugins": [
-      "@oclif/plugin-help"
+      "@sabelhost/plugin-help"
     ]
   },
   "repository": "sabelhost/create-sabelhost-expo",
   "scripts": {
-    "postpack": "rm -f oclif.manifest.json",
+    "postpack": "rm -f sabelhost.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "",
     "test": "echo NO TESTS",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "sabelhost-dev readme && git add README.md"
   },
   "types": "lib/index.d.ts",
   "prettier": {
