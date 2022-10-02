@@ -1,6 +1,6 @@
 {
-  "name": "nextjetstream",
-  "description": "Scaffold a new Laravel and Next.js application",
+  "name": "create-sabelhost-expo",
+  "description": "React native expo app with redux and Magnus UI",
   "version": "1.0.0",
   "author": "Ahmed Maher @ahmedmaher30190",
   "dependencies": {
@@ -31,7 +31,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/ozziexsh/laravel-nextstream",
+  "homepage": "https://github.com/sabelhost/create-sabelhost-expo.git",
   "keywords": [
     "oclif"
   ],
@@ -39,12 +39,12 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "create-nextstream-app",
+    "bin": "create-sabelhost-expo new",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "ozziexsh/laravel-nextstream",
+  "repository": "sabelhost/create-sabelhost-expo",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
