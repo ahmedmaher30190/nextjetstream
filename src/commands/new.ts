@@ -22,10 +22,10 @@ export default class New extends Command {
     const frontendFolder = path.join(rootFolder, args.name);
     fs.mkdirSync(rootFolder);
     execSync(
-      'git clone https://github.com/sabelhost/react-native-app.git'+args.name,
+      'git clone https://github.com/sabelhost/react-native-app.git '+args.name,
       { cwd: rootFolder },
     );
-    execSync('rm -rf frontend/.git', { cwd: rootFolder });
+    execSync('rm -rf '+frontendFolder+'/.git', { cwd: rootFolder });
 
     this.log('install yarn .');
     execSync('npm -g i yarn', { cwd: frontendFolder });
